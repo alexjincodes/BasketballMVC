@@ -1,0 +1,40 @@
+﻿@{
+    ViewBag.Title = "Basketball MVC";
+}
+
+<h2>Basketball Professionals</h2>
+
+<!--Adding a button "ADD NEW" -->
+<a class="btn btn-success" style="margin-bottom:10px" onclick="PopupForm('@Url.Action("AddOrEdit","Basketball")')">Add New Entry</a>
+
+<!--Creating The Table -->
+<table id="bballTable" class="table table-stripped table-bordered" style="width:100%">
+    <thead>
+        <tr>
+            <td><input type="text" id="Search" placeholder="Search for Exercise"></td>
+        </tr>
+        <tr>
+            <th>Basketball Id</th>
+            <th>Player Name</th>
+            <th>Exercise</th>
+            <th>Exercise Duration</th>
+            <th>Exercise Date</th>
+            <th></th>
+        </tr>
+    </thead>
+</table>
+
+<!--Adding dataTable plug in -->>
+<link href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap4.min.css" />
+
+<!--Script section - Add from custom .js file-->
+@section scripts {
+    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap4.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/LoadDataTable.js"></script>
+    <script src="~/Scripts/PopupForm.js"></script>
+    <script src="~/Scripts/SearchFunction.js"></script>
+    }

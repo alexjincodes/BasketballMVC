@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BasketballModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Basketball">
+    <Key>
+      <PropertyRef Name="BallId" />
+    </Key>
+    <Property Name="BallId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PlayerName" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="Exercise" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="ExerciseDuration" Type="Int32" />
+    <Property Name="ExerciseDate" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityContainer Name="BasketballEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Basketballs" EntityType="Self.Basketball" />
+  </EntityContainer>
+</Schema>
